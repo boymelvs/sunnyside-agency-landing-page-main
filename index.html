@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="description" content="this is a solution to sunnyside agency landing page challenge from frontend mentor" />
+      <meta name="keyword" content="html, css, flexbox, grid, javascripts" />
+      <meta name="author" content="melvin" />
+
+      <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+
+      <link rel="stylesheet" href="./styles/styles.css" />
+
+      <title>Frontend Mentor | Sunnyside agency landing page</title>
+   </head>
+   <body>
+      <div class="container">
+         <header class="header">
+            <nav class="header_nav_bar">
+               <div class="logo_container">
+                  <img src="./images/logo.svg" alt="Sunnyside" class="logo" />
+               </div>
+
+               <!-- /* menu here */ -->
+               <div class="menu">
+                  <ul>
+                     <li>
+                        <a href="#about" class="about">About</a>
+                     </li>
+                     <li>
+                        <a href="#services" class="services"> Services </a>
+                     </li>
+                     <li>
+                        <a href="#projects" class="projects"> Projects </a>
+                     </li>
+                     <li>
+                        <a href="#" class="contact">
+                           <button type="button" class="contact_btn">Contact</button>
+                        </a>
+                     </li>
+                  </ul>
+
+                  <!-- /* burger menu here */ -->
+                  <button type="button" class="burger-menu" id="burger-menu">
+                     <img src="./images/icon-hamburger.svg" alt="Hamburger" class="burger" />
+                  </button>
+               </div>
+            </nav>
+            <div class="title_container">
+               <h1 class="title">We are creatives</h1>
+               <div class="arrow_container">
+                  <img src="./images/icon-arrow-down.svg" alt="Arrow" class="arrow" />
+               </div>
+            </div>
+         </header>
+
+         <main class="main_content">
+            <!-- /* about here */ -->
+            <div class="card about_container" id="about">
+               <div class="about_details">
+                  <h2 class="sub_title">Transform your brand</h2>
+                  <p class="details">
+                     We are a full-service creative agency specializing in helping brands grow fast. Engage your clients through compelling visuals that do most of the marketing
+                     for you.
+                  </p>
+                  <a href="#" class="learn_more"> Learn more </a>
+               </div>
+               <div class="egg_container">
+                  <img src="./images/desktop/image-transform.jpg" alt="Egg" class="egg" />
+               </div>
+            </div>
+
+            <!-- /* services here */ -->
+            <div class="card services_container" id="services ">
+               <div class="cup_container">
+                  <img src="./images/desktop/image-stand-out.jpg" alt="Cup" class="cup" />
+               </div>
+               <div class="services_details">
+                  <h2 class="sub_title">Stand out to the right audience</h2>
+                  <p class="details">
+                     Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places.
+                  </p>
+                  <a href="#" class="learn_more"> Learn more </a>
+               </div>
+            </div>
+
+            <!-- /* projects here */ -->
+            <div class="card projects_container" id="projects">
+               <div class="graphic_design">
+                  <img src="./images/desktop/image-graphic-design.jpg" alt="Berry" class="berry" />
+                  <h3 class="project_title">Graphic design</h3>
+
+                  <p class="design_details">Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.</p>
+               </div>
+
+               <div class="photography">
+                  <img src="./images/desktop/image-photography.jpg" alt="Big Orange" class="big_orange" />
+                  <h3 class="project_title">Photography</h3>
+                  <p class="photograpy_details">Increase your credibility by getting the most stunning, high-quality photos that improve your business image.</p>
+               </div>
+            </div>
+
+            <!-- /* testimonials here */ -->
+            <div class="card testimonial_container">
+               <h3 class="testimonials">Client testimonials</h3>
+               <div class="profile_container">
+                  <div class="bio">
+                     <img src="./images/image-emily.jpg" alt="Emily R." class="profile_photo" />
+                     <p class="testimony">We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.</p>
+                     <p class="name">Emily R.</p>
+                     <p class="occupation">Marketing Director</p>
+                  </div>
+
+                  <div class="bio">
+                     <img src="./images/image-thomas.jpg" alt="Thomas S." class="profile_photo" />
+                     <p class="testimony">Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.</p>
+                     <p class="name">Thomas S.</p>
+                     <p class="occupation">Chief Operating Officer</p>
+                  </div>
+
+                  <div class="bio">
+                     <img src="./images/image-jennie.jpg" alt="Jennie F." class="profile_photo" />
+                     <p class="testimony">Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!</p>
+                     <p class="name">Jennie F.</p>
+                     <p class="occupation">Business Owner</p>
+                  </div>
+               </div>
+            </div>
+
+            <!-- /* gallery here */ -->
+            <div class="gallery_container">
+               <div class="pic_1">
+                  <img src="./images/desktop/image-gallery-milkbottles.jpg" alt="Milk Bottles" class="milk" />
+               </div>
+               <div class="pic_2">
+                  <img src="./images/desktop/image-gallery-orange.jpg" alt="Orange" class="orange" />
+               </div>
+               <div class="pic_3">
+                  <img src="./images/desktop/image-gallery-cone.jpg" alt="cone" class="cone" />
+               </div>
+               <div class="pic_4">
+                  <img src="./images/desktop/image-gallery-sugarcubes.jpg" alt="Sugar Cubes" class="sugar_cubes" />
+               </div>
+            </div>
+         </main>
+
+         <!-- /* footer here */ -->
+         <footer class="attribution">
+            <div class="footer_menu">
+               <div class="h3 footer_title">sunnyside</div>
+               <div class="footer_nav">
+                  <ul>
+                     <li>
+                        <a href="#" class="menu_about">About</a>
+                     </li>
+                     <li>
+                        <a href="#" class="menu_services">Services</a>
+                     </li>
+                     <li>
+                        <a href="#" class="menu_projects">Projects</a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+
+            <div class="social_media">
+               <ul>
+                  <li>
+                     <a href="#" class="facebook">
+                        <img src="./images/icon-facebook.svg" alt="Facebook" class="icon icon_fb" />
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#" class="instagram">
+                        <img src="./images/icon-instagram.svg" alt="Instagram" class="icon icon_instagram" />
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#" class="twitter">
+                        <img src="./images/icon-twitter.svg" alt="Twitter" class="icon icon_twitter" />
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#" class="pinterest">
+                        <img src="./images/icon-pinterest.svg" alt="Pinterest" class="icon icon_pinterest" />
+                     </a>
+                  </li>
+               </ul>
+            </div>
+
+            <div class="code_by">
+               Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Your Name Here</a>.
+            </div>
+         </footer>
+      </div>
+      <script src="./scripts/index.js"></script>
+   </body>
+</html>

@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&display=swap");
+
+*,
+::before,
+::after {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+:root {
+   /* Primary */
+   --soft-red: hsl(7, 99%, 70%);
+   --yellow: hsl(51, 100%, 49%);
+   --dark-saturated-cyan-graph-text: hsl(167, 40%, 24%);
+   --dark-blue-photo-text: hsl(198, 62%, 26%);
+   --dark-moderate-cyan: hsl(168, 34%, 41%);
+
+   /* Neutral */
+   --very-dark-desaturated-blue: hsl(212, 27%, 19%);
+   --very-dark-grayish-blue: hsl(213, 9%, 39%);
+   --dark-grayish-blue: hsl(232, 10%, 55%);
+   --grayish-blue: hsl(210, 4%, 67%);
+   --white: hsl(0, 0%, 100%);
+
+   /* font */
+   --font-size-10: 62.5%;
+   --font-fam-barlow: "Barlow", sans-serif;
+   --font-fam-fraunces: "Fraunces", serif;
+   --font-weight-600: 600;
+   --font-weight-700: 700;
+   --font-weight-900: 900;
+}
+
+html {
+   font-size: var(--font-size-10);
+   font-family: var(--font-fam-barlow);
+}
+
+body {
+   font-size: 1.6rem;
+   font-weight: var(--font-weight-600);
+   color: var(--grayish-blue);
+}
+
+h1,
+h2,
+h3 {
+   font-family: var(--font-fam-fraunces);
+   font-weight: var(--font-weight-900);
+   color: var(--very-dark-desaturated-blue);
+}
+
+.container {
+   display: flex;
+   flex-direction: column;
+}
+
+.header {
+   padding: 5rem 5rem 0 5rem;
+   width: 100%;
+   background-image: url("../images/desktop/image-header.jpg");
+   background-position: top -5rem center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   height: 60rem;
+}
+
+.header_nav_bar {
+   display: flex;
+   justify-content: space-between;
+}
+
+.menu ul {
+   display: flex;
+   gap: 5rem;
+   list-style-type: none;
+}
+
+.menu ul li a {
+   text-decoration: none;
+   color: var(--white);
+}
+
+.title_container {
+   display: flex;
+   flex-direction: column;
+   gap: 10rem;
+   align-items: center;
+}
+
+.title {
+   text-transform: uppercase;
+   text-align: center;
+   color: var(--white);
+}
