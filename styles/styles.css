@@ -1,6 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap");
+@import url("'https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&display=swap");
 
-@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@400;700;900&display=swap");
 
 *,
 ::before,
@@ -17,6 +17,8 @@
    --dark-saturated-cyan-graph-text: hsl(167, 40%, 24%);
    --dark-blue-photo-text: hsl(198, 62%, 26%);
    --dark-moderate-cyan: hsl(168, 34%, 41%);
+   --contact_btn: hsl(200, 100%, 72%);
+   --footer-bg: hsl(168, 34%, 65%);
 
    /* Neutral */
    --very-dark-desaturated-blue: hsl(212, 27%, 19%);
@@ -29,6 +31,7 @@
    --font-size-10: 62.5%;
    --font-fam-barlow: "Barlow", sans-serif;
    --font-fam-fraunces: "Fraunces", serif;
+   --font-weight-400: 400;
    --font-weight-600: 600;
    --font-weight-700: 700;
    --font-weight-900: 900;
@@ -43,11 +46,14 @@ body {
    font-size: 1.6rem;
    font-weight: var(--font-weight-600);
    color: var(--grayish-blue);
+
+   /*to center the container */
+   display: flex;
+   justify-content: center;
 }
 
 h1,
-h2,
-h3 {
+h2 {
    font-family: var(--font-fam-fraunces);
    font-weight: var(--font-weight-900);
    color: var(--very-dark-desaturated-blue);
@@ -56,16 +62,23 @@ h3 {
 .container {
    display: flex;
    flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   max-width: 144rem;
 }
 
+/* header start here */
 .header {
+   display: flex;
+   flex-direction: column;
+   gap: 10rem; /* between nav_bar & title */
    padding: 5rem 5rem 0 5rem;
    width: 100%;
    background-image: url("../images/desktop/image-header.jpg");
-   background-position: top -5rem center;
+   background-position: center;
    background-repeat: no-repeat;
    background-size: cover;
-   height: 60rem;
+   min-height: 75rem;
 }
 
 .header_nav_bar {
@@ -75,8 +88,10 @@ h3 {
 
 .menu ul {
    display: flex;
-   gap: 5rem;
+   align-items: center;
+   gap: 5rem; /* between each menu */
    list-style-type: none;
+   font-weight: var(--font-weight-600);
 }
 
 .menu ul li a {
@@ -84,15 +99,267 @@ h3 {
    color: var(--white);
 }
 
+.contact_btn {
+   width: 100%;
+   padding: 1.5rem 3rem;
+   text-transform: uppercase;
+   font-weight: var(--font-weight-900);
+   font-family: var(--font-fam-fraunces);
+   background-color: var(--white);
+   border: none;
+   border-radius: 5rem;
+}
+
+.contact_btn:hover {
+   background-color: var(--contact_btn);
+   color: var(--white);
+   cursor: pointer;
+}
+
+.burger_menu {
+   display: none;
+}
+
 .title_container {
    display: flex;
    flex-direction: column;
-   gap: 10rem;
+   gap: 10rem; /* between title & arrow */
    align-items: center;
 }
 
 .title {
    text-transform: uppercase;
    text-align: center;
+   letter-spacing: 1rem;
    color: var(--white);
+}
+
+.main_content {
+   display: flex;
+   flex-direction: column;
+}
+
+.card {
+   display: grid;
+   grid-template-columns: repeat(12, 1fr);
+   height: 60rem;
+}
+
+/* common property for about, services & projects */
+.image_container {
+   grid-column: span 6;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: contain;
+}
+
+/* about start here */
+.about_title {
+   padding: 15rem 20rem 0 15rem;
+}
+
+.about_details {
+   padding: 0 12rem 0 15rem;
+   line-height: 3rem;
+}
+
+/* common property for both about & services */
+.details_container {
+   grid-column: span 6;
+   display: flex;
+   flex-direction: column;
+   gap: 3rem;
+}
+
+/* common property for both about & services */
+.learn_more {
+   margin-left: 15rem;
+   text-transform: uppercase;
+   text-decoration: none;
+   color: var(--very-dark-desaturated-blue);
+   font-weight: var(--font-weight-900);
+   font-family: var(--font-fam-fraunces);
+}
+
+.about_learn {
+   border-bottom: 0.75rem solid var(--yellow);
+}
+
+/* common property for both about & services */
+.line {
+   display: block;
+   margin-top: -0.7rem;
+   margin-left: -0.4rem;
+   width: 12.5rem;
+   border-radius: 5rem;
+   opacity: 0.5;
+}
+
+/* common property for both about & services */
+.line:hover {
+   opacity: 1;
+   cursor: pointer;
+   z-index: 999;
+}
+
+.about {
+   background-image: url("../images/desktop/image-transform.jpg");
+}
+
+/* services start here */
+.services {
+   background-image: url("../images/desktop/image-stand-out.jpg");
+}
+
+.services_title {
+   padding: 15rem 15rem 0 10rem;
+}
+
+.services_details {
+   padding: 0 18rem 0 10rem;
+   line-height: 3rem;
+}
+
+.services_learn {
+   margin-left: 10rem;
+}
+
+.services_line {
+   border-bottom: 0.75rem solid var(--soft-red);
+}
+
+/* projects start here */
+.graphic_design,
+.photography {
+   display: flex;
+   flex-direction: column;
+   gap: 3rem;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   padding-top: 30rem;
+   background-image: url("../images/desktop/image-graphic-design.jpg");
+}
+
+.project_details {
+   color: var(--very-dark-grayish-blue);
+   font-weight: var(--font-weight-600);
+   padding: 0 17rem;
+   line-height: 3rem;
+}
+.photography {
+   background-image: url("../images/desktop/image-photography.jpg");
+}
+
+/* client testimonials start here */
+.testimonial_container {
+   display: flex;
+   flex-direction: column;
+   gap: 4rem;
+   justify-content: center;
+   align-items: center;
+   padding: 15rem;
+}
+
+.testimonial_title {
+   text-align: center;
+   text-transform: uppercase;
+   font-family: var(--font-fam-fraunces);
+   letter-spacing: 1rem;
+}
+
+.profile_container {
+   display: flex;
+   gap: 3rem;
+   justify-content: center;
+}
+
+.bio {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 5rem;
+}
+
+.profile_photo {
+   width: 10rem;
+   height: 10rem;
+   border-radius: 50%;
+}
+
+.testimony {
+   text-align: center;
+   line-height: 3rem;
+   color: var(--very-dark-grayish-blue);
+}
+
+.name {
+   text-align: center;
+   color: var(--very-dark-desaturated-blue);
+   font-weight: var(--font-weight-900);
+   font-family: var(--font-fam-fraunces);
+}
+
+.occupation {
+   display: block;
+   padding-top: 1rem;
+   font-size: 1.3rem;
+   color: var(--grayish-blue);
+   font-weight: var(--font-weight-600);
+   font-family: var(--font-fam-barlow);
+}
+
+.gallery_container {
+   display: grid;
+   grid-template-columns: repeat(12, 1fr);
+   border: 0.1rem solid blue;
+}
+
+.gallery {
+   grid-column: span 3;
+}
+
+.gallery img {
+   width: 100%;
+   height: 100%;
+}
+
+footer {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 3rem;
+   padding: 5rem 0 2rem 0;
+   background-color: var(--footer-bg);
+   width: 100%;
+   border: 0.1rem solid red;
+}
+
+.footer_menu {
+   display: flex;
+   flex-direction: column;
+   gap: 3rem;
+   align-items: center;
+}
+
+.footer_title {
+   color: var(--dark-saturated-cyan-graph-text);
+}
+
+.footer_nav ul {
+   display: flex;
+   justify-content: center;
+   gap: 5rem;
+   list-style-type: none;
+}
+
+.footer_nav ul li a {
+   color: var(--dark-moderate-cyan);
+   text-decoration: none;
+}
+
+.social_media ul {
+   display: flex;
+   gap: 2rem;
+   list-style-type: none;
 }

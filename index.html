@@ -25,13 +25,13 @@
                <div class="menu">
                   <ul>
                      <li>
-                        <a href="#about" class="about">About</a>
+                        <a href="#about_container" class="about_menu">About</a>
                      </li>
                      <li>
-                        <a href="#services" class="services"> Services </a>
+                        <a href="#services_container" class="services_menu"> Services </a>
                      </li>
                      <li>
-                        <a href="#projects" class="projects"> Projects </a>
+                        <a href="#projects_container" class="projects_menu"> Projects </a>
                      </li>
                      <li>
                         <a href="#" class="contact">
@@ -41,11 +41,12 @@
                   </ul>
 
                   <!-- /* burger menu here */ -->
-                  <button type="button" class="burger-menu" id="burger-menu">
+                  <button type="button" class="burger_menu" id="burger_menu">
                      <img src="./images/icon-hamburger.svg" alt="Hamburger" class="burger" />
                   </button>
                </div>
             </nav>
+
             <div class="title_container">
                <h1 class="title">We are creatives</h1>
                <div class="arrow_container">
@@ -56,90 +57,94 @@
 
          <main class="main_content">
             <!-- /* about here */ -->
-            <div class="card about_container" id="about">
-               <div class="about_details">
-                  <h2 class="sub_title">Transform your brand</h2>
-                  <p class="details">
+            <div class="card about_container" id="about_container">
+               <div class="details_container">
+                  <h1 class="about_title">Transform your brand</h1>
+
+                  <p class="about_details">
                      We are a full-service creative agency specializing in helping brands grow fast. Engage your clients through compelling visuals that do most of the marketing
                      for you.
                   </p>
-                  <a href="#" class="learn_more"> Learn more </a>
+
+                  <a href="#" class="learn_more"> Learn more <span class="about_learn line"></span> </a>
                </div>
-               <div class="egg_container">
-                  <img src="./images/desktop/image-transform.jpg" alt="Egg" class="egg" />
+
+               <div class="about image_container">
+                  <!-- <img src="./images/mobile/image-transform.jpg" alt="Egg" class="egg_mobile" /> -->
                </div>
             </div>
 
             <!-- /* services here */ -->
-            <div class="card services_container" id="services ">
-               <div class="cup_container">
-                  <img src="./images/desktop/image-stand-out.jpg" alt="Cup" class="cup" />
+            <div class="card services_container" id="services_container">
+               <div class="services image_container">
+                  <!-- <img src="./images/mobile/image-stand-out.jpg" alt="Cup" class="cup_mobile" /> -->
                </div>
-               <div class="services_details">
-                  <h2 class="sub_title">Stand out to the right audience</h2>
-                  <p class="details">
+
+               <div class="details_container">
+                  <h1 class="services_title">Stand out to the right audience</h1>
+
+                  <p class="services_details">
                      Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places.
                   </p>
-                  <a href="#" class="learn_more"> Learn more </a>
+
+                  <a href="#" class="services_learn learn_more"> Learn more <span class="services_line line"></span> </a>
                </div>
             </div>
 
             <!-- /* projects here */ -->
-            <div class="card projects_container" id="projects">
-               <div class="graphic_design">
-                  <img src="./images/desktop/image-graphic-design.jpg" alt="Berry" class="berry" />
-                  <h3 class="project_title">Graphic design</h3>
-
-                  <p class="design_details">Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.</p>
+            <div class="card projects_container" id="projects_container">
+               <div class="graphic_design image_container">
+                  <h1 class="project_title">Graphic design</h1>
+                  <p class="project_details">Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.</p>
                </div>
 
-               <div class="photography">
-                  <img src="./images/desktop/image-photography.jpg" alt="Big Orange" class="big_orange" />
-                  <h3 class="project_title">Photography</h3>
-                  <p class="photograpy_details">Increase your credibility by getting the most stunning, high-quality photos that improve your business image.</p>
+               <div class="photography image_container">
+                  <h1 class="project_title">Photography</h1>
+                  <p class="project_details">Increase your credibility by getting the most stunning, high-quality photos that improve your business image.</p>
                </div>
             </div>
 
             <!-- /* testimonials here */ -->
-            <div class="card testimonial_container">
-               <h3 class="testimonials">Client testimonials</h3>
+            <div class="testimonial_container">
+               <h2 class="testimonial_title">Client testimonials</h2>
                <div class="profile_container">
                   <div class="bio">
                      <img src="./images/image-emily.jpg" alt="Emily R." class="profile_photo" />
                      <p class="testimony">We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.</p>
-                     <p class="name">Emily R.</p>
-                     <p class="occupation">Marketing Director</p>
+                     <p class="name">Emily R. <span class="occupation">Marketing Director</span></p>
                   </div>
 
                   <div class="bio">
                      <img src="./images/image-thomas.jpg" alt="Thomas S." class="profile_photo" />
                      <p class="testimony">Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.</p>
-                     <p class="name">Thomas S.</p>
-                     <p class="occupation">Chief Operating Officer</p>
+                     <p class="name">Thomas S.<span class="occupation">Chief Operating Officer</span></p>
                   </div>
 
                   <div class="bio">
                      <img src="./images/image-jennie.jpg" alt="Jennie F." class="profile_photo" />
                      <p class="testimony">Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!</p>
-                     <p class="name">Jennie F.</p>
-                     <p class="occupation">Business Owner</p>
+                     <p class="name">Jennie F.<span class="occupation">Business Owner</span></p>
                   </div>
                </div>
             </div>
 
             <!-- /* gallery here */ -->
             <div class="gallery_container">
-               <div class="pic_1">
-                  <img src="./images/desktop/image-gallery-milkbottles.jpg" alt="Milk Bottles" class="milk" />
+               <div class="gallery pic_1">
+                  <img src="./images/desktop/image-gallery-milkbottles.jpg" alt="Milk Bottles" class="milk_desktop" />
+                  <!-- <img src="./images/mobile/image-gallery-milkbottles.jpg" alt="Milk Bottles" class="milk_mobile" /> -->
                </div>
-               <div class="pic_2">
-                  <img src="./images/desktop/image-gallery-orange.jpg" alt="Orange" class="orange" />
+               <div class="gallery pic_2">
+                  <img src="./images/desktop/image-gallery-orange.jpg" alt="Orange" class="orange_desktop" />
+                  <!-- <img src="./images/mobile/image-gallery-orange.jpg" alt="Orange" class="pic_2_orange" /> -->
                </div>
-               <div class="pic_3">
-                  <img src="./images/desktop/image-gallery-cone.jpg" alt="cone" class="cone" />
+               <div class="gallery pic_3">
+                  <img src="./images/desktop/image-gallery-cone.jpg" alt="Cone" class="cone_desktop" />
+                  <!-- <img src="./images/mobile/image-gallery-cone.jpg" alt="cone" class="cone" /> -->
                </div>
-               <div class="pic_4">
-                  <img src="./images/desktop/image-gallery-sugarcubes.jpg" alt="Sugar Cubes" class="sugar_cubes" />
+               <div class="gallery pic_4">
+                  <img src="./images/desktop/image-gallery-sugarcubes.jpg" alt="Sugar Cubes" class="sugar_desktop" />
+                  <!-- <img src="./images/mobile/image-gallery-sugar-cubes.jpg" alt="Sugar Cubes" class="sugar_cubes" /> -->
                </div>
             </div>
          </main>
@@ -147,7 +152,7 @@
          <!-- /* footer here */ -->
          <footer class="attribution">
             <div class="footer_menu">
-               <div class="h3 footer_title">sunnyside</div>
+               <h2 class="footer_title">sunnyside</h2>
                <div class="footer_nav">
                   <ul>
                      <li>
