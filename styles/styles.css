@@ -203,13 +203,13 @@ h2 {
    border: none;
    border-radius: 5rem;
    padding: 1.5rem 2.5rem;
+   background-color: var(--yellow);
 }
 
 .contact_btn:hover {
-   transition: all 350ms;
    cursor: pointer;
-   background-color: var(--yellow);
    width: 100%;
+   transition: all 350ms;
 }
 
 .title_container {
@@ -554,6 +554,10 @@ footer a {
    .pointer,
    .pointer.active {
       display: none;
+   }
+
+   .contact_btn {
+      background-color: var(--white);
    }
 
    .contact_btn:hover {
