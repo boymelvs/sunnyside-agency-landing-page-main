@@ -76,7 +76,7 @@ h2 {
    display: flex;
    flex-direction: column;
    align-items: center;
-   max-width: 54.5rem;
+   max-width: 76.8rem;
    width: 100%;
 }
 
@@ -94,6 +94,18 @@ h2 {
    background-size: cover;
    width: 100%;
    min-height: 50rem;
+}
+
+@media (min-width: 481px) {
+   .header {
+      background-image: url("../images/desktop/image-header.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      gap: 14rem;
+      min-height: 70rem;
+   }
 }
 
 .header_nav_bar {
@@ -131,10 +143,12 @@ h2 {
    transition: all 355ms ease-in-out;
 }
 
+/* classes for js */
 .menu .list.show {
    display: flex;
 }
 
+/* classes for js */
 .menu .list.active {
    font-size: 1.8rem;
    padding: 4rem 5rem;
@@ -153,7 +167,7 @@ h2 {
    color: var(--contact_btn);
 }
 
-/* burger herer */
+/* burger here */
 .burger_container {
    display: flex;
    flex-direction: column;
@@ -171,16 +185,19 @@ h2 {
    transition: all 350ms;
 }
 
+/* classes for js */
 .burger.line1.active {
    width: 2.7rem;
    transform: rotate(-45deg);
    transform-origin: right top;
 }
 
+/* classes for js */
 .burger.line2.active {
    visibility: hidden;
 }
 
+/* classes for js */
 .burger.line3.active {
    width: 2.7rem;
    transform: rotate(45deg);
@@ -200,6 +217,7 @@ h2 {
    display: none;
 }
 
+/* classes for js */
 .pointer.active {
    display: unset;
 }
@@ -223,7 +241,7 @@ h2 {
 .title_container {
    display: flex;
    flex-direction: column;
-   gap: 5rem; /* between title & arrow */
+   gap: 6rem; /* between title & arrow */
    align-items: center;
    text-align: center;
    width: 100%;
@@ -340,7 +358,7 @@ h2 {
    text-align: center;
    padding-bottom: 5rem;
 
-   background-position: top -1rem;
+   background-position: center;
    background-repeat: no-repeat;
    background-size: cover;
    width: 100%;
@@ -510,7 +528,7 @@ footer a {
 }
 
 /* ================= desktop screen start here ================= */
-@media (min-width: 1000px) {
+@media (min-width: 1024px) {
    .desktop {
       display: unset;
    }
@@ -525,9 +543,7 @@ footer a {
 
    /* header here */
    .header {
-      gap: 10rem;
-      background-image: url("../images/desktop/image-header.jpg");
-      min-height: 70rem;
+      gap: 12rem;
    }
 
    .header_nav_bar {
@@ -548,9 +564,10 @@ footer a {
       opacity: 1;
    }
 
+   /* classes for js */
    .menu .list.active {
       padding: 0;
-      transform: translateY(0%);
+      transform: translateX(0%);
       font-size: inherit;
    }
 
@@ -585,7 +602,7 @@ footer a {
    .card {
       display: grid;
       grid-template-columns: repeat(12, 1fr);
-      height: 60rem;
+      height: 100%;
    }
 
    /* about & services here */
@@ -662,6 +679,7 @@ footer a {
    display: none;
 }
 
+/* classes for js */
 .scroll_up.active {
    display: block;
 }
