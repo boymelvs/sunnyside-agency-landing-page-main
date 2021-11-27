@@ -1,9 +1,9 @@
 "use strict";
 
-/* add & remove classes */
+/* adding & removing classes here */
 const active = (value) => {
    const delay = () => {
-      /* after change display from none to flex execute this */
+      /* after changing display none to flex execute this */
       setTimeout(() => {
          if (value.classList.contains("active")) {
             value.classList.remove("active");
@@ -13,7 +13,7 @@ const active = (value) => {
                value.classList.remove("show");
             }, 200);
 
-            /* add active classes to display menu  */
+            /* adding active classes to display menu  */
          } else {
             value.classList.add("active");
          }
@@ -23,7 +23,7 @@ const active = (value) => {
    if (value.classList.contains("show")) {
       delay();
 
-      /* add show classes to change display from none to flex */
+      /* adding show classes to change display none to flex */
    } else {
       value.classList.add("show");
       delay();
@@ -40,7 +40,6 @@ const showBurger = (lines) => {
 /* get the location of page */
 const getPosition = () => {
    let currentPosition = Math.floor(window.pageYOffset / 100) * 100;
-
    return currentPosition;
 };
 
@@ -48,17 +47,18 @@ const getPosition = () => {
 const moveUpDown = (myPosition, currentPosition) => {
    const scrollStep = () => {
       if (myPosition > currentPosition) {
-         window.pageYOffset === myPosition ? clearInterval(timer) : window.scroll(0, getPosition() + 100);
+         getPosition() === myPosition ? clearInterval(timer) : window.scroll(0, getPosition() + 100);
       } else {
-         window.pageYOffset === myPosition ? clearInterval(timer) : window.scroll(0, getPosition() - 100);
+         getPosition() === myPosition ? clearInterval(timer) : window.scroll(0, getPosition() - 100);
       }
    };
 
-   let timer = setInterval(scrollStep, 17);
+   let timer = setInterval(scrollStep, 7);
 };
 
-/* call show burger & add/remove classess */
+/* call fn to show burger & add/remove classes */
 const closeOpen = (elements, value, lines) => {
+   /* looping for multiple listening */
    if (elements.length > 1) {
       elements.forEach((element) => {
          element.addEventListener("click", () => {
@@ -81,16 +81,23 @@ const closeOpen = (elements, value, lines) => {
          });
       });
 
-      /** */
+      /* listening for single element */
    } else {
       elements.addEventListener("click", () => {
-         active(value);
-         showBurger(lines);
+         /* moveup page when up_arrow click */
+         if (elements.classList.contains("scroll_up")) {
+            moveUpDown(value);
+
+            /* open/close menu & burger */
+         } else {
+            active(value);
+            showBurger(lines);
+         }
       });
    }
 };
 
-/** get elements from DOM */
+/* get elements from DOM */
 const menus = document.querySelectorAll(".menus"); /* get all list of menu */
 const burger = document.querySelector(".burger_container"); /* get the burger */
 const lines = document.querySelectorAll(".burger"); /* get all line of burger */
@@ -99,13 +106,9 @@ const arrowUP = document.querySelector(".scroll_up"); /* get up_arrow */
 
 closeOpen(burger, navBar, lines); /* toggle burger & show menu list */
 closeOpen(menus, navBar, lines); /* close menu list when active link in menu was click */
+closeOpen(arrowUP, 0); /* scroll up the page whe up_arrow click */
 
 /* listening when to show up_arrow */
 window.addEventListener("scroll", () => {
    getPosition() > 1000 ? arrowUP.classList.add("active") : arrowUP.classList.remove("active");
-});
-
-/* listening when up_arrow was click */
-arrowUP.addEventListener("click", () => {
-   moveUpDown(0);
 });

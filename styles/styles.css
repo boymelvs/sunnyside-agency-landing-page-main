@@ -139,7 +139,7 @@ h2 {
    width: 100%;
    opacity: 0;
    visibility: hidden;
-   transform: translateX(100%);
+   transform: translateX(-100%);
    transition: all 355ms ease-in-out;
 }
 
