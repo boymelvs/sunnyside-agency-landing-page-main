@@ -17,7 +17,7 @@ const active = (value) => {
          } else {
             value.classList.add("active");
          }
-      }, 2);
+      }, 1);
    };
 
    if (value.classList.contains("show")) {
@@ -74,8 +74,10 @@ const closeOpen = (elements, value, lines) => {
                moveUpDown(1900, getPosition());
             }
 
-            active(value);
-            showBurger(lines);
+            if (value.classList.contains("active")) {
+               active(value);
+               showBurger(lines);
+            }
          });
       });
 
@@ -100,9 +102,7 @@ closeOpen(menus, navBar, lines); /* close menu list when active link in menu was
 
 /* listening when to show up_arrow */
 window.addEventListener("scroll", () => {
-   let arrowPosition = window.pageYOffset;
-
-   arrowPosition > 1000 ? arrowUP.classList.add("active") : arrowUP.classList.remove("active");
+   getPosition() > 1000 ? arrowUP.classList.add("active") : arrowUP.classList.remove("active");
 });
 
 /* listening when up_arrow was click */
