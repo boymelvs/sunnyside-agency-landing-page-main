@@ -11,7 +11,7 @@ const active = (value) => {
             /* delay on removing show classes */
             setTimeout(() => {
                value.classList.remove("show");
-            }, 350);
+            }, 200);
 
             /* add active classes to display menu  */
          } else {
