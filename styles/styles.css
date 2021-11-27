@@ -445,7 +445,7 @@ h2 {
 
 /* footer start here */
 footer {
-   padding: 7rem 0;
+   padding-top: 7rem;
    display: flex;
    flex-direction: column;
    gap: 7rem; /* between footer menu & social media */
@@ -462,7 +462,7 @@ footer a {
 .footer_menu {
    display: flex;
    flex-direction: column;
-   gap: 7rem; /* between footer title & menu*/
+   gap: 7rem; /* between footer title & menu */
    align-items: center;
    width: 100%;
 }
@@ -487,18 +487,18 @@ footer a {
 
 .footer_nav ul a:hover {
    color: var(--white);
-   transition: all 500ms;
+   transition: all 350ms;
 }
 
 .social_media ul {
    display: flex;
-   gap: 3rem; /* between social media icon */
+   gap: 3rem; /* between each social media icon */
    list-style-type: none;
 }
 
 .icon:hover {
    filter: brightness(0) invert(1);
-   transition: all 250ms;
+   transition: all 350ms;
 }
 
 .coded_by {
