@@ -17,7 +17,7 @@ const active = (value) => {
          } else {
             value.classList.add("active");
          }
-      }, 2);
+      }, 1);
    };
 
    if (value.classList.contains("show")) {
