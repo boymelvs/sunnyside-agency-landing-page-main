@@ -110,7 +110,7 @@ h2 {
 }
 
 .menu .list {
-   display: flex;
+   display: none;
    flex-direction: column;
    gap: 4rem; /* between each menu & contact button */
    align-items: center;
@@ -125,15 +125,21 @@ h2 {
    right: 0;
    border-radius: 1rem;
    width: 100%;
+   opacity: 0;
    visibility: hidden;
-   transform: translateY(-200%);
+   transform: translateX(100%);
    transition: all 355ms ease-in-out;
+}
+
+.menu .list.show {
+   display: flex;
 }
 
 .menu .list.active {
    font-size: 1.8rem;
    padding: 4rem 5rem;
-   transform: translateY(5%);
+   opacity: 1;
+   transform: translateX(0%);
    visibility: visible;
    z-index: 999;
 }
@@ -533,11 +539,13 @@ footer a {
    }
 
    .menu .list {
+      display: flex;
       position: unset;
       flex-direction: row;
       visibility: visible;
       transform: unset;
       background-color: unset;
+      opacity: 1;
    }
 
    .menu .list.active {
@@ -599,6 +607,10 @@ footer a {
       width: 40rem;
    }
 
+   .line {
+      margin-left: -0.4rem;
+   }
+
    /* projects start here */
    .project_image_container {
       grid-column: span 6;
@@ -651,7 +663,7 @@ footer a {
 }
 
 .scroll_up.active {
-   display: unset;
+   display: block;
 }
 
 .arrowUp {

@@ -2,7 +2,32 @@
 
 /* add & remove classes */
 const active = (value) => {
-   value.classList.contains("active") ? value.classList.remove("active") : value.classList.add("active");
+   const delay = () => {
+      /* after change display from none to flex execute this */
+      setTimeout(() => {
+         if (value.classList.contains("active")) {
+            value.classList.remove("active");
+
+            /* delay on removing show classes */
+            setTimeout(() => {
+               value.classList.remove("show");
+            }, 350);
+
+            /* add active classes to display menu  */
+         } else {
+            value.classList.add("active");
+         }
+      }, 2);
+   };
+
+   if (value.classList.contains("show")) {
+      delay();
+
+      /* add show classes to change display from none to flex */
+   } else {
+      value.classList.add("show");
+      delay();
+   }
 };
 
 /* toggle burger */
@@ -78,7 +103,6 @@ window.addEventListener("scroll", () => {
    let arrowPosition = window.pageYOffset;
 
    arrowPosition > 1000 ? arrowUP.classList.add("active") : arrowUP.classList.remove("active");
-   console.log("this", arrowPosition);
 });
 
 /* listening when up_arrow was click */
