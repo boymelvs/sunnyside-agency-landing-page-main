@@ -49,10 +49,6 @@ const closeOpen = (elements, value, lines) => {
                moveUpDown(1900, getPosition());
             }
 
-            if (element.innerText === "Testimonials") {
-               moveUpDown(2500, getPosition());
-            }
-
             active(value);
             showBurger(lines);
          });
