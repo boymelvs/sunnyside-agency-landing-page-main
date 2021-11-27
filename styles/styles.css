@@ -187,21 +187,22 @@ h2 {
 
 /* classes for js */
 .burger.line1.active {
-   width: 2.7rem;
-   transform: rotate(-45deg);
-   transform-origin: right top;
+   width: 2.8rem;
+   transform: rotate(45deg);
+   transform-origin: left top;
 }
 
 /* classes for js */
 .burger.line2.active {
-   visibility: hidden;
+   display: none;
 }
 
 /* classes for js */
 .burger.line3.active {
-   width: 2.7rem;
-   transform: rotate(45deg);
-   transform-origin: right bottom;
+   margin-top: 1rem;
+   width: 2.8rem;
+   transform: rotate(-45deg);
+   transform-origin: left bottom;
 }
 
 /* triangle pointer */
