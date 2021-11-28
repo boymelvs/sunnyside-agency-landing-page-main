@@ -39,7 +39,7 @@ const showBurger = (lines) => {
 
 /* get the location of page */
 const getPosition = () => {
-   let currentPosition = window.pageYOffset || window.scrollY;
+   let currentPosition = window.pageYOffset;
 
    return Math.floor(currentPosition / 100) * 100;
 };
@@ -47,10 +47,16 @@ const getPosition = () => {
 /* move up/down the page */
 const moveUpDown = (myPosition, currentPosition) => {
    const scrollStep = () => {
+      let webPosition;
+
       if (myPosition > currentPosition) {
-         getPosition() >= myPosition ? clearInterval(timer) : window.scroll(0, getPosition() + 100);
+         webPosition = getPosition() + 300;
+         webPosition >= myPosition ? clearInterval(timer) : window.scroll(0, webPosition + 100);
+
+         /* move up */
       } else {
-         getPosition() <= myPosition ? clearInterval(timer) : window.scroll(0, getPosition() - 100);
+         webPosition = getPosition() - 300;
+         webPosition <= myPosition ? clearInterval(timer) : window.scroll(0, webPosition - 100);
       }
    };
 
@@ -64,7 +70,7 @@ const closeOpen = (elements, value, lines) => {
       elements.forEach((element) => {
          element.addEventListener("click", () => {
             if (element.innerText === "About") {
-               moveUpDown(500, getPosition());
+               moveUpDown(600, getPosition());
             }
 
             if (element.innerText === "Services") {
@@ -72,7 +78,7 @@ const closeOpen = (elements, value, lines) => {
             }
 
             if (element.innerText === "Projects") {
-               moveUpDown(1900, getPosition());
+               moveUpDown(1700, getPosition());
             }
 
             if (value.classList.contains("active")) {
@@ -111,5 +117,6 @@ closeOpen(arrowUP, 0); /* scroll up the page whe up_arrow click */
 
 /* listening when to show up_arrow */
 window.addEventListener("scroll", () => {
-   getPosition() > 1000 ? arrowUP.classList.add("active") : arrowUP.classList.remove("active");
+   getPosition() > 750 ? arrowUP.classList.add("active") : arrowUP.classList.remove("active");
+   console.log("this", window.pageYOffset);
 });
