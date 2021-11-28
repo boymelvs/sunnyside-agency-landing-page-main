@@ -11,13 +11,13 @@ const active = (value) => {
             /* delay on removing show classes */
             setTimeout(() => {
                value.classList.remove("show");
-            }, 200);
+            }, 150);
 
             /* adding active classes to display menu  */
          } else {
             value.classList.add("active");
          }
-      }, 1);
+      }, 0.1);
    };
 
    if (value.classList.contains("show")) {
