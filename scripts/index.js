@@ -118,5 +118,4 @@ closeOpen(arrowUP, 0); /* scroll up the page whe up_arrow click */
 /* listening when to show up_arrow */
 window.addEventListener("scroll", () => {
    getPosition() > 750 ? arrowUP.classList.add("active") : arrowUP.classList.remove("active");
-   console.log("this", window.pageYOffset);
 });
