@@ -39,21 +39,22 @@ const showBurger = (lines) => {
 
 /* get the location of page */
 const getPosition = () => {
-   let currentPosition = Math.floor(window.pageYOffset / 100) * 100;
-   return currentPosition;
+   let currentPosition = window.pageYOffset || window.scrollY;
+
+   return Math.floor(currentPosition / 100) * 100;
 };
 
 /* move up/down the page */
 const moveUpDown = (myPosition, currentPosition) => {
    const scrollStep = () => {
       if (myPosition > currentPosition) {
-         getPosition() === myPosition ? clearInterval(timer) : window.scroll(0, getPosition() + 100);
+         getPosition() >= myPosition ? clearInterval(timer) : window.scroll(0, getPosition() + 100);
       } else {
-         getPosition() === myPosition ? clearInterval(timer) : window.scroll(0, getPosition() - 100);
+         getPosition() <= myPosition ? clearInterval(timer) : window.scroll(0, getPosition() - 100);
       }
    };
 
-   let timer = setInterval(scrollStep, 7);
+   let timer = setInterval(scrollStep, 17);
 };
 
 /* call fn to show burger & add/remove classes */
