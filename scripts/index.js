@@ -3,7 +3,7 @@
 /* adding & removing classes here */
 const active = (value) => {
    const delay = () => {
-      /* after changing display none to flex execute this */
+      /* after changing display from none to flex execute this */
       setTimeout(() => {
          if (value.classList.contains("active")) {
             value.classList.remove("active");
@@ -23,7 +23,7 @@ const active = (value) => {
    if (value.classList.contains("show")) {
       delay();
 
-      /* adding show classes to change display none to flex */
+      /* adding show classes to change display from none to flex */
    } else {
       value.classList.add("show");
       delay();
@@ -37,50 +37,13 @@ const showBurger = (lines) => {
    });
 };
 
-/* get the location of page */
-const getPosition = () => {
-   let currentPosition = window.pageYOffset;
-
-   return Math.floor(currentPosition / 100) * 100;
-};
-
-/* move up/down the page */
-const moveUpDown = (myPosition, currentPosition) => {
-   const scrollStep = () => {
-      let webPosition;
-
-      if (myPosition > currentPosition) {
-         webPosition = getPosition() + 300;
-         webPosition >= myPosition ? clearInterval(timer) : window.scroll(0, webPosition + 100);
-
-         /* move up */
-      } else {
-         webPosition = getPosition() - 300;
-         webPosition <= myPosition ? clearInterval(timer) : window.scroll(0, webPosition - 100);
-      }
-   };
-
-   let timer = setInterval(scrollStep, 17);
-};
-
 /* call fn to show burger & add/remove classes */
 const closeOpen = (elements, value, lines) => {
    /* looping for multiple listening */
    if (elements.length > 1) {
       elements.forEach((element) => {
          element.addEventListener("click", () => {
-            if (element.innerText === "About") {
-               moveUpDown(600, getPosition());
-            }
-
-            if (element.innerText === "Services") {
-               moveUpDown(1300, getPosition());
-            }
-
-            if (element.innerText === "Projects") {
-               moveUpDown(1700, getPosition());
-            }
-
+            /* hide menu once content is click */
             if (value.classList.contains("active")) {
                active(value);
                showBurger(lines);
@@ -91,15 +54,9 @@ const closeOpen = (elements, value, lines) => {
       /* listening for single element */
    } else {
       elements.addEventListener("click", () => {
-         /* moveup page when up_arrow click */
-         if (elements.classList.contains("scroll_up")) {
-            moveUpDown(value);
-
-            /* open/close menu & burger */
-         } else {
-            active(value);
-            showBurger(lines);
-         }
+         /* open/close menu & burger */
+         active(value);
+         showBurger(lines);
       });
    }
 };
@@ -113,9 +70,8 @@ const arrowUP = document.querySelector(".scroll_up"); /* get up_arrow */
 
 closeOpen(burger, navBar, lines); /* toggle burger & show menu list */
 closeOpen(menus, navBar, lines); /* close menu list when active link in menu was click */
-closeOpen(arrowUP, 0); /* scroll up the page whe up_arrow click */
 
 /* listening when to show up_arrow */
 window.addEventListener("scroll", () => {
-   getPosition() > 750 ? arrowUP.classList.add("active") : arrowUP.classList.remove("active");
+   window.pageYOffset > 750 ? arrowUP.classList.add("active") : arrowUP.classList.remove("active");
 });
